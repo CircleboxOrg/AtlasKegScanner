@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B13F84AA1B13A4A10055F230 /* ScanEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B13F84A91B13A4A10055F230 /* ScanEditViewController.m */; };
+		B13F84AC1B13DE700055F230 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13F84AB1B13DE700055F230 /* MessageUI.framework */; };
+		B145B8081B0ECF6600B95963 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B145B8071B0ECF6600B95963 /* SetViewController.m */; };
+		B145B80B1B0EDB3500B95963 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B145B80A1B0EDB3500B95963 /* ScannerViewController.m */; };
+		B145B80D1B0EDF3300B95963 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145B80C1B0EDF3300B95963 /* AVFoundation.framework */; };
+		B145B8131B0EE03F00B95963 /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = B145B8121B0EE03F00B95963 /* Barcode.m */; };
+		B145B8151B0EE08800B95963 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145B8141B0EE08800B95963 /* UIKit.framework */; };
+		B145B8171B0EE10100B95963 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145B8161B0EE10100B95963 /* CoreGraphics.framework */; };
+		B145B8191B0EE19000B95963 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B145B8181B0EE19000B95963 /* Foundation.framework */; };
 		B167B86C1B09720500D40AC9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B86B1B09720500D40AC9 /* main.m */; };
 		B167B86F1B09720500D40AC9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B86E1B09720500D40AC9 /* AppDelegate.m */; };
-		B167B8721B09720500D40AC9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8711B09720500D40AC9 /* ViewController.m */; };
+		B167B8721B09720500D40AC9 /* SetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8711B09720500D40AC9 /* SetsViewController.m */; };
 		B167B8751B09720500D40AC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B167B8731B09720500D40AC9 /* Main.storyboard */; };
 		B167B8771B09720500D40AC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B167B8761B09720500D40AC9 /* Images.xcassets */; };
 		B167B87A1B09720500D40AC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B167B8781B09720500D40AC9 /* LaunchScreen.xib */; };
 		B167B8861B09720500D40AC9 /* Atlas_Keg_ScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8851B09720500D40AC9 /* Atlas_Keg_ScannerTests.m */; };
+		B167B8911B09753000D40AC9 /* Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8901B09753000D40AC9 /* Scan.m */; };
+		B167B8941B0976A600D40AC9 /* ScanSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8931B0976A600D40AC9 /* ScanSet.m */; };
+		B1B370111B2691AC00B36C27 /* 131660.wav in Resources */ = {isa = PBXBuildFile; fileRef = B1B370101B2691AC00B36C27 /* 131660.wav */; };
+		B1B370131B26951A00B36C27 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B370121B26951A00B36C27 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +40,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B13F84A81B13A4A10055F230 /* ScanEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanEditViewController.h; sourceTree = "<group>"; };
+		B13F84A91B13A4A10055F230 /* ScanEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanEditViewController.m; sourceTree = "<group>"; };
+		B13F84AB1B13DE700055F230 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		B145B8061B0ECF6600B95963 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
+		B145B8071B0ECF6600B95963 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SetViewController.m; sourceTree = "<group>"; };
+		B145B8091B0EDB3500B95963 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScannerViewController.h; sourceTree = "<group>"; };
+		B145B80A1B0EDB3500B95963 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScannerViewController.m; sourceTree = "<group>"; };
+		B145B80C1B0EDF3300B95963 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B145B8111B0EE03F00B95963 /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Barcode.h; sourceTree = "<group>"; };
+		B145B8121B0EE03F00B95963 /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Barcode.m; sourceTree = "<group>"; };
+		B145B8141B0EE08800B95963 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B145B8161B0EE10100B95963 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B145B8181B0EE19000B95963 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B167B8661B09720500D40AC9 /* Atlas Keg Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Atlas Keg Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B167B86A1B09720500D40AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B167B86B1B09720500D40AC9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B167B86D1B09720500D40AC9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B167B86E1B09720500D40AC9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B167B8701B09720500D40AC9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B167B8711B09720500D40AC9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B167B8701B09720500D40AC9 /* SetsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetsViewController.h; sourceTree = "<group>"; };
+		B167B8711B09720500D40AC9 /* SetsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetsViewController.m; sourceTree = "<group>"; };
 		B167B8741B09720500D40AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B167B8761B09720500D40AC9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B167B8791B09720500D40AC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B167B87F1B09720500D40AC9 /* Atlas Keg ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Atlas Keg ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B167B8841B09720500D40AC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B167B8851B09720500D40AC9 /* Atlas_Keg_ScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Atlas_Keg_ScannerTests.m; sourceTree = "<group>"; };
+		B167B88F1B09753000D40AC9 /* Scan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scan.h; sourceTree = "<group>"; };
+		B167B8901B09753000D40AC9 /* Scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scan.m; sourceTree = "<group>"; };
+		B167B8921B0976A600D40AC9 /* ScanSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSet.h; sourceTree = "<group>"; };
+		B167B8931B0976A600D40AC9 /* ScanSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSet.m; sourceTree = "<group>"; };
+		B1B370101B2691AC00B36C27 /* 131660.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 131660.wav; sourceTree = "<group>"; };
+		B1B370121B26951A00B36C27 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +79,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B370131B26951A00B36C27 /* AudioToolbox.framework in Frameworks */,
+				B13F84AC1B13DE700055F230 /* MessageUI.framework in Frameworks */,
+				B145B80D1B0EDF3300B95963 /* AVFoundation.framework in Frameworks */,
+				B145B8171B0EE10100B95963 /* CoreGraphics.framework in Frameworks */,
+				B145B8151B0EE08800B95963 /* UIKit.framework in Frameworks */,
+				B145B8191B0EE19000B95963 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +101,12 @@
 		B167B85D1B09720500D40AC9 = {
 			isa = PBXGroup;
 			children = (
+				B1B370121B26951A00B36C27 /* AudioToolbox.framework */,
+				B13F84AB1B13DE700055F230 /* MessageUI.framework */,
+				B145B8181B0EE19000B95963 /* Foundation.framework */,
+				B145B8161B0EE10100B95963 /* CoreGraphics.framework */,
+				B145B8141B0EE08800B95963 /* UIKit.framework */,
+				B145B80C1B0EDF3300B95963 /* AVFoundation.framework */,
 				B167B8681B09720500D40AC9 /* Atlas Keg Scanner */,
 				B167B8821B09720500D40AC9 /* Atlas Keg ScannerTests */,
 				B167B8671B09720500D40AC9 /* Products */,
@@ -81,14 +125,27 @@
 		B167B8681B09720500D40AC9 /* Atlas Keg Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				B1B370101B2691AC00B36C27 /* 131660.wav */,
 				B167B86D1B09720500D40AC9 /* AppDelegate.h */,
 				B167B86E1B09720500D40AC9 /* AppDelegate.m */,
-				B167B8701B09720500D40AC9 /* ViewController.h */,
-				B167B8711B09720500D40AC9 /* ViewController.m */,
+				B167B8701B09720500D40AC9 /* SetsViewController.h */,
+				B167B8711B09720500D40AC9 /* SetsViewController.m */,
 				B167B8731B09720500D40AC9 /* Main.storyboard */,
+				B145B8091B0EDB3500B95963 /* ScannerViewController.h */,
+				B145B80A1B0EDB3500B95963 /* ScannerViewController.m */,
 				B167B8761B09720500D40AC9 /* Images.xcassets */,
 				B167B8781B09720500D40AC9 /* LaunchScreen.xib */,
 				B167B8691B09720500D40AC9 /* Supporting Files */,
+				B167B88F1B09753000D40AC9 /* Scan.h */,
+				B167B8901B09753000D40AC9 /* Scan.m */,
+				B167B8921B0976A600D40AC9 /* ScanSet.h */,
+				B167B8931B0976A600D40AC9 /* ScanSet.m */,
+				B145B8061B0ECF6600B95963 /* SetViewController.h */,
+				B145B8071B0ECF6600B95963 /* SetViewController.m */,
+				B145B8111B0EE03F00B95963 /* Barcode.h */,
+				B145B8121B0EE03F00B95963 /* Barcode.m */,
+				B13F84A81B13A4A10055F230 /* ScanEditViewController.h */,
+				B13F84A91B13A4A10055F230 /* ScanEditViewController.m */,
 			);
 			path = "Atlas Keg Scanner";
 			sourceTree = "<group>";
@@ -168,6 +225,7 @@
 				TargetAttributes = {
 					B167B8651B09720500D40AC9 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3LJS488S7G;
 					};
 					B167B87E1B09720500D40AC9 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -202,6 +260,7 @@
 				B167B8751B09720500D40AC9 /* Main.storyboard in Resources */,
 				B167B87A1B09720500D40AC9 /* LaunchScreen.xib in Resources */,
 				B167B8771B09720500D40AC9 /* Images.xcassets in Resources */,
+				B1B370111B2691AC00B36C27 /* 131660.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B167B8721B09720500D40AC9 /* ViewController.m in Sources */,
+				B167B8721B09720500D40AC9 /* SetsViewController.m in Sources */,
 				B167B86F1B09720500D40AC9 /* AppDelegate.m in Sources */,
+				B145B80B1B0EDB3500B95963 /* ScannerViewController.m in Sources */,
+				B167B8911B09753000D40AC9 /* Scan.m in Sources */,
+				B145B8131B0EE03F00B95963 /* Barcode.m in Sources */,
+				B167B8941B0976A600D40AC9 /* ScanSet.m in Sources */,
+				B13F84AA1B13A4A10055F230 /* ScanEditViewController.m in Sources */,
 				B167B86C1B09720500D40AC9 /* main.m in Sources */,
+				B145B8081B0ECF6600B95963 /* SetViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +364,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -347,9 +412,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Atlas Keg Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -357,9 +426,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Atlas Keg Scanner/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -416,6 +489,7 @@
 				B167B88B1B09720500D40AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B167B88C1B09720500D40AC9 /* Build configuration list for PBXNativeTarget "Atlas Keg ScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +498,7 @@
 				B167B88E1B09720500D40AC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
