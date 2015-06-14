@@ -69,11 +69,11 @@
 }
 - (IBAction)addSet
 {
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add Scan Set" message:@"Enter set name:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add Scan Set" message:@"Enter set name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
     alert.alertViewStyle = UIAlertViewStylePlainTextInput;
     UITextField * alertTextField = [alert textFieldAtIndex:0];
     //alertTextField.keyboardType = UIKeyboardTypeAlphabet;
-    alertTextField.placeholder = @"Enter your name";
+    alertTextField.placeholder = @"Enter set name";
     
     
     [alert show];
@@ -81,6 +81,7 @@
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
     ScanSet *ss;
     ss = [[ScanSet alloc] init];
     ss.scanSetName = [[alertView textFieldAtIndex:0] text];
@@ -88,8 +89,8 @@
     [self.tableView reloadData];
     
     
-    AudioServicesPlaySystemSound (1054);
-    
+    //AudioServicesPlaySystemSound (1054);
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

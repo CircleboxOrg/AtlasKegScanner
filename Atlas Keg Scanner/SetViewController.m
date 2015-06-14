@@ -42,6 +42,7 @@
 - (IBAction)scanButtonPressed:(id)sender {
     [self performSegueWithIdentifier:@"scan" sender:self];
 }
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"scan"]) {
         
@@ -58,6 +59,36 @@
     }
 
 }
+
+//removing this due to Invalid Update error when deleting only row to go back to count = 0
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    // Return the number of sections.
+//    if ([[[self scanSet] scans] count] > 0) {
+//        
+//        self.tableView.backgroundView = nil;
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+//        return 1;
+//        
+//    } else {
+//        
+//        // Display a message when the table is empty
+//        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+//        
+//        messageLabel.text = @"No scans in set.";
+//        messageLabel.textColor = [UIColor blackColor];
+//        messageLabel.numberOfLines = 0;
+//        messageLabel.textAlignment = NSTextAlignmentCenter;
+//        //messageLabel.font = [UIFont fontWithName:@"Palatino-Italic" size:20];
+//        [messageLabel sizeToFit];
+//        
+//        self.tableView.backgroundView = messageLabel;
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        
+//    }
+//    
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -85,7 +116,7 @@
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self.tableView reloadData];
-    self.scanSetName.text = self.scanSet.scanSetName;
+    
 }
 - (IBAction)editSet
 {
@@ -101,14 +132,36 @@
 }
 
 - (IBAction)scanSetNameUpdate:(id)sender {
-    self.scanSet.scanSetName = self.scanSetName.text;
-    self.title = self.scanSetName.text;
+    //self.scanSet.scanSetName = self.scanSetName.text;
+    //self.title = self.scanSetName.text;
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Rename Scan Set" message:@"Enter set name:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    //alertTextField.keyboardType = UIKeyboardTypeAlphabet;
+    alertTextField.text = self.scanSet.scanSetName;
+    
+    
+    [alert show];
 }
+
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        
+        self.scanSet.scanSetName = [[alertView textFieldAtIndex:0] text];
+        self.title = self.scanSet.scanSetName;
+        
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-}
+    }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {

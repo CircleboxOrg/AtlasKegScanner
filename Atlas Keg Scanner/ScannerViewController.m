@@ -210,7 +210,11 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         [self.scanSet.scans addObject:s];
         
         AudioServicesPlaySystemSound (1007);
+    } else {
+        AudioServicesPlaySystemSound (1016);
     }
+    // sleep for 1 second
+    [NSThread sleepForTimeInterval:1.0f];
     //prepare for next scan
     [self startRunning];
     // don't exit until cancel
@@ -236,6 +240,52 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
+}
+
+-(IBAction) manualClicked
+{
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Manual Entry" message:@"Enter code:" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    
+    alertTextField.placeholder = @"Enter code";
+    
+    [alert show];
+}
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 1) {
+        
+        
+        [self stopRunning];
+        
+        
+        Scan *s;
+        s = [[Scan alloc] init];
+        s.scanValue = [[alertView textFieldAtIndex:0] text];
+        
+        // don't add value already in list
+        BOOL found = FALSE;
+        for (id val in self.scanSet.scans) {
+            Scan *oldScan = (Scan *)val;
+            if ([oldScan.scanValue isEqualToString:s.scanValue])
+                found = TRUE;
+        }
+        
+        if (!found) {
+            [self.scanSet.scans addObject:s];
+            
+            AudioServicesPlaySystemSound (1007);
+        } else {
+            AudioServicesPlaySystemSound (1016);
+        }
+        //prepare for next scan
+        [self startRunning];
+        // don't exit until cancel
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        
+    }
 }
 
 @end

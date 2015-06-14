@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5x6-zP-Nks">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
@@ -65,31 +66,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RtE-Jg-I5C">
-                                <rect key="frame" x="16" y="72" width="187" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmq-iR-X66">
-                                <rect key="frame" x="204" y="72" width="105" height="30"/>
-                                <state key="normal" title="Update Name">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="scanSetNameUpdate:" destination="pUH-dA-drb" eventType="touchUpInside" id="A0y-hp-bY1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZB-Zj-OND">
-                                <rect key="frame" x="16" y="128" width="68" height="30"/>
-                                <state key="normal" title="Email Set">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="sendEmailClick:" destination="pUH-dA-drb" eventType="touchUpInside" id="fmo-bR-XgE"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="s0X-W9-fSg">
-                                <rect key="frame" x="16" y="156" width="288" height="360"/>
+                                <rect key="frame" x="16" y="72" width="288" height="444"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ScanCell" id="14y-fN-4qk">
@@ -107,6 +85,22 @@
                                     <outlet property="delegate" destination="pUH-dA-drb" id="c5z-ft-K2n"/>
                                 </connections>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-rB-sjf">
+                                <rect key="frame" x="16" y="524" width="288" height="44"/>
+                                <items>
+                                    <barButtonItem title="Rename Set" id="coI-zf-BDd">
+                                        <connections>
+                                            <action selector="scanSetNameUpdate:" destination="pUH-dA-drb" id="Gc4-Ul-0uI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="     " id="IbK-Mx-aus"/>
+                                    <barButtonItem title="Email Set Data" id="1wF-7L-xJM">
+                                        <connections>
+                                            <action selector="sendEmailClick:" destination="pUH-dA-drb" id="L5s-s6-icW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -118,9 +112,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="scanSetName" destination="RtE-Jg-I5C" id="Cnh-AW-HFR"/>
                         <outlet property="tableView" destination="s0X-W9-fSg" id="UC4-F7-Vu3"/>
                         <segue destination="MdQ-IG-0jl" kind="modal" identifier="scan" id="hhc-8g-BZx"/>
                     </connections>
@@ -145,40 +137,32 @@
                                 <rect key="frame" x="16" y="125" width="291" height="261"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7O-uN-QZV">
-                                <rect key="frame" x="213" y="49" width="91" height="30"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="manualScanAdd:" destination="MdQ-IG-0jl" eventType="touchUpInside" id="OBo-gL-qPT"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Hn-Qy-Brw">
-                                <rect key="frame" x="16" y="49" width="192" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manually enter scan and click Add" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzW-P6-ulg">
-                                <rect key="frame" x="16" y="20" width="264" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Barcodes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDa-2T-dss">
+                                <rect key="frame" x="97" y="28" width="126" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygx-UZ-mel">
-                                <rect key="frame" x="16" y="87" width="62" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelClick:" destination="MdQ-IG-0jl" eventType="touchUpInside" id="q35-jh-1Fm"/>
-                                </connections>
-                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lH8-9y-hpZ">
+                                <rect key="frame" x="0.0" y="516" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Enter Code" id="gcZ-Yb-vZR">
+                                        <connections>
+                                            <action selector="manualClicked" destination="MdQ-IG-0jl" id="Q6o-6u-Tpc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="             " id="JZP-Oh-vsC"/>
+                                    <barButtonItem title="List of Scans" id="3bW-0d-lv4">
+                                        <connections>
+                                            <action selector="cancelClick:" destination="MdQ-IG-0jl" id="Pub-Ya-wZx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="manualScanText" destination="0Hn-Qy-Brw" id="48c-YJ-J1q"/>
                         <outlet property="previewView" destination="Xj4-lB-0fI" id="X2v-vg-97S"/>
                     </connections>
                 </viewController>
@@ -199,12 +183,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ek-3o-3xw">
-                                <rect key="frame" x="16" y="20" width="288" height="30"/>
+                                <rect key="frame" x="16" y="87" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-qn-NQG">
-                                <rect key="frame" x="122" y="110" width="77" height="30"/>
+                                <rect key="frame" x="81" y="139" width="77" height="30"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -212,8 +196,14 @@
                                     <action selector="cancelClick:" destination="Bhy-ap-2CH" eventType="touchUpInside" id="Jkb-89-cyV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit scanned code" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-e4-TCj">
+                                <rect key="frame" x="81" y="28" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZ3-4w-YKS">
-                                <rect key="frame" x="125" y="77" width="71" height="30"/>
+                                <rect key="frame" x="169" y="139" width="71" height="30"/>
                                 <state key="normal" title="Update">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
