@@ -25,6 +25,7 @@
 		B167B8861B09720500D40AC9 /* Atlas_Keg_ScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8851B09720500D40AC9 /* Atlas_Keg_ScannerTests.m */; };
 		B167B8911B09753000D40AC9 /* Scan.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8901B09753000D40AC9 /* Scan.m */; };
 		B167B8941B0976A600D40AC9 /* ScanSet.m in Sources */ = {isa = PBXBuildFile; fileRef = B167B8931B0976A600D40AC9 /* ScanSet.m */; };
+		B17E23421B31A5F1006052DE /* atlaskeg180.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E23411B31A5F1006052DE /* atlaskeg180.png */; };
 		B1B370111B2691AC00B36C27 /* 131660.wav in Resources */ = {isa = PBXBuildFile; fileRef = B1B370101B2691AC00B36C27 /* 131660.wav */; };
 		B1B370131B26951A00B36C27 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1B370121B26951A00B36C27 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +71,7 @@
 		B167B8901B09753000D40AC9 /* Scan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scan.m; sourceTree = "<group>"; };
 		B167B8921B0976A600D40AC9 /* ScanSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanSet.h; sourceTree = "<group>"; };
 		B167B8931B0976A600D40AC9 /* ScanSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanSet.m; sourceTree = "<group>"; };
+		B17E23411B31A5F1006052DE /* atlaskeg180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atlaskeg180.png; sourceTree = "<group>"; };
 		B1B370101B2691AC00B36C27 /* 131660.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 131660.wav; sourceTree = "<group>"; };
 		B1B370121B26951A00B36C27 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -125,6 +127,7 @@
 		B167B8681B09720500D40AC9 /* Atlas Keg Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				B17E23411B31A5F1006052DE /* atlaskeg180.png */,
 				B1B370101B2691AC00B36C27 /* 131660.wav */,
 				B167B86D1B09720500D40AC9 /* AppDelegate.h */,
 				B167B86E1B09720500D40AC9 /* AppDelegate.m */,
@@ -257,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B17E23421B31A5F1006052DE /* atlaskeg180.png in Resources */,
 				B167B8751B09720500D40AC9 /* Main.storyboard in Resources */,
 				B167B87A1B09720500D40AC9 /* LaunchScreen.xib in Resources */,
 				B167B8771B09720500D40AC9 /* Images.xcassets in Resources */,
@@ -364,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -401,7 +405,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -415,6 +419,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Atlas Keg Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -429,6 +434,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Atlas Keg Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
