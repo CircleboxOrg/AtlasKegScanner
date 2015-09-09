@@ -175,14 +175,25 @@
     NSString *emailTitle = @"Keg scans";
     // Email Content
     NSString *messageBody = @"Attached are the keg serial numbers.";
-    NSMutableString *attachment = [NSMutableString stringWithString:@"" ];
+    NSMutableString *attachmentTxt = [NSMutableString stringWithString:@"" ];
+    NSMutableString *attachmentCsv = [NSMutableString stringWithString:@"" ];
     for (id obj in _scanSet.scans) {
         Scan* s = (Scan *)obj;
-        [attachment appendString: [s scanValue]];
-        [attachment appendString:@"\r\n"];
+        [attachmentTxt appendString: [s scanValue]];
+        [attachmentTxt appendString:@"\r\n"];
+        
+        [attachmentCsv appendString: [s scanValue]];
+        [attachmentCsv appendString:@"\n"];
     }
-    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"keg scans.txt"];
-    [attachment writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    NSString* filePathTxt = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"keg scans.txt"];
+    
+    
+    [attachmentTxt writeToFile:filePathTxt atomically:YES encoding:NSUTF8StringEncoding error:NULL];
+    
+    NSString* filePathCsv = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"keg scans.csv"];
+    
+    [attachmentCsv writeToFile:filePathCsv atomically:YES encoding:NSUTF16LittleEndianStringEncoding error:NULL];
+
 
     // To address
     NSArray *toRecipents = [NSArray arrayWithObject:@"randall@atlaskegs.com"];
@@ -192,11 +203,16 @@
     [mc setSubject:emailTitle];
     [mc setMessageBody:messageBody isHTML:NO];
     [mc setToRecipients:toRecipents];
-    NSData *attData = [NSData dataWithContentsOfFile:filePath];
+    NSData *attDataTxt = [NSData dataWithContentsOfFile:filePathTxt];
+    NSData *attDataCsv = [NSData dataWithContentsOfFile:filePathCsv];
     
-    [mc addAttachmentData:attData
+    [mc addAttachmentData:attDataTxt
                                  mimeType:@"text/plain"
                  fileName:[[_scanSet scanSetName] stringByAppendingString:@".txt"]];
+    [mc addAttachmentData:attDataCsv
+                 mimeType:@"text/csv"
+                 fileName:[[_scanSet scanSetName] stringByAppendingString:@".csv"]];
+    
     // Present mail view controller on screen
     [self presentViewController:mc animated:YES completion:NULL];
 
