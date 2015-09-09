@@ -73,17 +73,31 @@
 }
 
 - (void)saveData {
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSData* myData = [NSKeyedArchiver archivedDataWithRootObject:[self scanSets]];
-    [defaults setObject:myData forKey:@"scanSetsArray"];
-    [defaults synchronize];
-
+    //only save if scanSets is not nil
+    //check backing variable, not property - checking property initializes if nil
+    if (_scanSets != nil)
+    {
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        NSData* myData = [NSKeyedArchiver archivedDataWithRootObject:[self scanSets]];
+        [defaults setObject:myData forKey:@"scanSetsArray"];
+        [defaults synchronize];
+    }
 }
 
 - (void)restoreData {
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSData* myData = [defaults objectForKey:@"scanSetsArray"];
-    _scanSets = [NSKeyedUnarchiver unarchiveObjectWithData:myData];
+    // only restore if scanSets is nil
+    //check backing variable, not property - checking property initializes if nil
+    if (_scanSets == nil)
+    {
+        NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+        NSData* myData = [defaults objectForKey:@"scanSetsArray"];
+        //_scanSets = [NSKeyedUnarchiver unarchiveObjectWithData:myData];
+        // only update if myData is not nil
+        if (myData != nil)
+        {
+            self.scanSets = [NSKeyedUnarchiver unarchiveObjectWithData:myData];
+        }
+    }
 }
 
 
