@@ -106,7 +106,9 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         SetViewController *destViewController = segue.destinationViewController;
         destViewController.scanSet = [scanSets objectAtIndex:indexPath.row];
-        destViewController.title = [[scanSets objectAtIndex:indexPath.row] scanSetName];
+        //destViewController.title = [[scanSets objectAtIndex:indexPath.row] scanSetName];
+        destViewController.title = [NSString stringWithFormat:@"%@ (%d)",[[scanSets objectAtIndex:indexPath.row] scanSetName],
+                                    (int)[[[scanSets objectAtIndex:indexPath.row] scans] count]];
     }
     
     

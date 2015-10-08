@@ -111,11 +111,14 @@
 
 - (void) refreshData {
     [self.tableView reloadData];
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
     [self.tableView reloadData];
+    self.title = [NSString stringWithFormat:@"%@ (%d)", self.scanSet.scanSetName,
+                  (int)[[self.scanSet scans] count]];
     
 }
 - (IBAction)editSet
@@ -151,7 +154,10 @@
     if (buttonIndex == 1) {
         
         self.scanSet.scanSetName = [[alertView textFieldAtIndex:0] text];
-        self.title = self.scanSet.scanSetName;
+        //self.title = self.scanSet.scanSetName;
+        self.title = [NSString stringWithFormat:@"%@ (%d)", self.scanSet.scanSetName,
+                                    (int)[[self.scanSet scans] count]];
+
         
     }
 }
