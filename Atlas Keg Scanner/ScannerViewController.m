@@ -17,6 +17,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet UISwitch *switchFlash;
 
 @end
 
@@ -287,5 +288,36 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         
     }
 }
+- (IBAction)switchPressedAction:(id)sender {
+    if (_switchFlash.on)
+    {
+     // turn off
+        if ([_videoDevice isTorchAvailable] && [_videoDevice isTorchModeSupported:AVCaptureTorchModeOff])
+        {
+            BOOL success = [_videoDevice lockForConfiguration:nil];
+            if (success)
+            {
+                [_videoDevice setTorchMode:AVCaptureTorchModeOff];
+                [_videoDevice unlockForConfiguration];
+            }
+            
+        }
+    }
+    else
+    {
+        if ([_videoDevice isTorchAvailable] && [_videoDevice isTorchModeSupported:AVCaptureTorchModeOn])
+        {
+            BOOL success = [_videoDevice lockForConfiguration:nil];
+            if (success)
+            {
+                [_videoDevice setTorchMode:AVCaptureTorchModeOn];
+                [_videoDevice unlockForConfiguration];
+            }
+            
+        }
+    }
+    
+}
+
 
 @end

@@ -19,4 +19,6 @@
 @property (nonatomic, strong) ScanSet *scanSet;
 //@property (weak, nonatomic) IBOutlet UITextField *scanSetName;
 - (void) refreshData;
+
+
 @end

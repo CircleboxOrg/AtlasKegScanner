@@ -179,6 +179,18 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZEC-lb-cRO">
+                                <rect key="frame" x="136" y="451" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchPressedAction:" destination="MdQ-IG-0jl" eventType="valueChanged" id="RLs-ul-vIz"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Flash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfo-8k-rkB">
+                                <rect key="frame" x="140" y="490" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -196,6 +208,7 @@
                     </view>
                     <connections>
                         <outlet property="previewView" destination="Xj4-lB-0fI" id="X2v-vg-97S"/>
+                        <outlet property="switchFlash" destination="ZEC-lb-cRO" id="wMD-NY-peo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0rV-sX-9aE" userLabel="First Responder" sceneMemberID="firstResponder"/>
