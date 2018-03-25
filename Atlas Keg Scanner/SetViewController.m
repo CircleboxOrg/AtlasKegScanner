@@ -178,7 +178,7 @@
 }
 - (IBAction)sendEmailClick:(id)sender {
     // Email Subject
-    NSString *emailTitle = @"Keg scans";
+    NSString *emailTitle = [NSString stringWithFormat: @"Keg scans - %@", _scanSet.scanSetName];
     // Email Content
     NSString *messageBody = @"Attached are the keg serial numbers.";
     NSMutableString *attachmentTxt = [NSMutableString stringWithString:@"" ];
@@ -202,13 +202,13 @@
 
 
     // To address
-    NSArray *toRecipents = [NSArray arrayWithObject:@"randall@atlaskegs.com"];
+    //NSArray *toRecipents = [NSArray arrayWithObject:@"randall@atlaskegs.com"];
     
     MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
     mc.mailComposeDelegate = self;
     [mc setSubject:emailTitle];
     [mc setMessageBody:messageBody isHTML:NO];
-    [mc setToRecipients:toRecipents];
+    //[mc setToRecipients:toRecipents];
     NSData *attDataTxt = [NSData dataWithContentsOfFile:filePathTxt];
     NSData *attDataCsv = [NSData dataWithContentsOfFile:filePathCsv];
     
